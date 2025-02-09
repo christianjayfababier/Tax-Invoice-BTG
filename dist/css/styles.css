@@ -1,0 +1,126 @@
+/* Reset margins and paddings for the whole page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure full height */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 60px; /* Match the height of the topbar */
+    left: 0;
+    width: 250px; /* Sidebar width */
+    height: calc(100% - 60px); /* Subtract the topbar height */
+    background-color: #335E53; /* Sidebar background color */
+    padding-top: 20px;
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover State for Sidebar Links */
+.sidebar a:hover {
+    background-color: #d1a684; /* Pastel brown on hover */
+    color: white;
+}
+
+/* Active Menu Item */
+.sidebar a.active {
+    background-color: #d1a684; /* Pastel brown for active menu */
+    color: white;
+    font-weight: bold;
+}
+
+/* Topbar Styling */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Fixed height for consistency */
+    background-color: #284941; /* Top bar background color */
+    color: white;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between title and user menu */
+    align-items: center; /* Vertically center the items */
+    padding: 0 20px; /* Add some horizontal padding */
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Logo and Title */
+.topbar .logo {
+    display: flex;
+    align-items: center; /* Vertically align logo and title */
+}
+
+.topbar img {
+    height: 40px; /* Adjust the logo height */
+    margin-right: 10px; /* Add spacing between logo and title */
+}
+
+.topbar span {
+    font-size: 1.25rem; /* Adjust the font size for the title */
+    font-weight: bold; /* Make the title bold */
+    white-space: nowrap; /* Prevent the title from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for long titles */
+}
+
+/* Dropdown Menu Styling */
+.dropdown .btn-secondary {
+    background-color: #335E53; /* Button background color */
+    border: none;
+    padding: 5px 10px; /* Adjust padding for better appearance */
+    font-size: 1rem; /* Adjust font size */
+    color: white; /* Ensure text is white */
+}
+
+.dropdown .btn-secondary:hover {
+    background-color: #d1a684; /* Hover color */
+}
+
+.dropdown-menu {
+    background-color: #335E53; /* Dropdown background color */
+    color: white;
+    border: none; /* Remove border */
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 10px 15px; /* Adjust padding for better click area */
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #284941; /* Dropdown hover color */
+    color: white;
+}
+
+/* Content Area Styling */
+.content {
+    margin-left: 250px; /* Leave space for the sidebar */
+    margin-top: 60px; /* Leave space for the topbar */
+    padding: 20px;
+    min-height: calc(100% - 60px); /* Ensure content fills remaining height */
+    background-color: #f8f9fa; /* Light background for content */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+.dropdown-menu {
+    max-width: 300px;
+    overflow-wrap: break-word;
+}
+.dropdown-item.fw-bold {
+    font-weight: bold;
+}
